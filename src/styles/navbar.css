@@ -1,80 +1,95 @@
+/* ===== NAVBAR BASE ===== */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  background-color: #000000;
-  color: white;
-  padding: 10px 20px;
+  position: fixed;
+  /* full-width sticky top */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: #000;
+  color: #fff;
+  padding: 12px 40px;
   box-sizing: border-box;
+  z-index: 1000;
+  transition: background 0.3s ease;
 }
 
+/* ===== LOGO ===== */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 55px;
+  width: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== NAV LINKS ===== */
 .nav-links {
   display: flex;
-  gap: 15px;
-  
+  gap: 20px;
 }
 
 .nav-links a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  text-decoration: underline;
-  color: lightgrey;
+  color: #ff0000;
 }
 
-.mobile-menu-icon {
+/* ===== MOBILE ICONS ===== */
+.mobile-menu-icon,
+.close-menu-icon {
   display: none;
   background: none;
   border: none;
-  color: white;
+  color: #fff;
+  cursor: pointer;
 }
 
-.close-menu-icon {
-  background: none;
-  border: none;
-  color: white;
-  text-align: right;
-}
-
+/* ===== RESPONSIVE ===== */
 @media (max-width: 992px) {
-
-  .logo {
-    width: 40px;
-    height: 40px;
-    background-image: url("../assets/logo.png");
-  }
-
   .nav-links {
     position: absolute;
     top: 0;
-    width: 200px;
+    right: -220px;
+    width: 220px;
     height: 100vh;
-    background-color: #191838;
-    padding: 20px 0;
-    display: flex;
+    background-color: #111;
     flex-direction: column;
-    gap: 10px;
-    transition: all 0.3s;
-  }
-
-  .nav-links.closed {
-    right: -200px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    transition: right 0.3s ease;
+    z-index: 999;
   }
 
   .nav-links.opened {
-    right: 0px;
+    right: 0;
   }
 
-  .navbar.expand {
-    overflow: visible;
+  .nav-links.closed {
+    right: -220px;
   }
 
   .mobile-menu-icon {
     display: block;
+  }
+
+  .navbar.expand {
+    overflow: visible;
   }
 }

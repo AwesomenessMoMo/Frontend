@@ -3,13 +3,13 @@ import './App.css';
 import Navbar from './components/navbar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useState } from 'react';
-import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Footer from './components/footer';
 import Store from './pages/Store';
 import Coaches from './pages/Coaches';
 import Supplemenets from './pages/Supplements';
 import Clothes from './pages/Clothes';
+import Contactus from './pages/Contactus';
 
 function App() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -27,7 +27,6 @@ function App() {
 
   return (
     <div className='main'>
-
       <div className="App" onClick={handleAppClick}>
         <BrowserRouter>
           <Navbar toggleMenu={toggleMenu} openMenu={openMenu}></Navbar>
@@ -35,9 +34,9 @@ function App() {
             <Route path='/' element={<Home />}></Route>
             <Route path='/Coaches' element={<Coaches />}></Route>
             <Route path='/Store' element={<Store />}></Route>
-            <Route path='/Contact' element={<Contact />}></Route>
             <Route path='/Supplements' element={<Supplemenets />}></Route>
             <Route path='/Clothes' element={<Clothes />}></Route>
+            <Route path='/contact-us' element={<Contactus />}></Route>
             <Route path='*' element={<Home />}></Route>
           </Routes>
           <Footer></Footer>

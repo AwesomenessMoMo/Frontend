@@ -1,0 +1,26 @@
+.coaches {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.coaches h1 {
+    font-size: 2.5rem;
+    color: #ff0000;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 1rem;
+}
+
+.coaches p {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    max-width: 700px;
+    line-height: 1.8;
+}

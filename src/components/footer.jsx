@@ -9,7 +9,8 @@ function Footer() {
     return <>
         <footer className="footer">
             <div className="footer-links">
-                <Link to="/contactus">Contact us</Link>
+                { }
+                <Link to="/contact-us">Contact Us</Link>
                 <Link to="/">Home</Link>
             </div>
             <div>

@@ -1,0 +1,18 @@
+.supplements {
+    background-image: url('../assets/supplements.png');
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    z-index: 10;
+    position: relative;
+}
+
+.supplements h1 {
+    color: #ff0000;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
