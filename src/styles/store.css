@@ -1,0 +1,193 @@
+/* Container for all store items */
+.store-container {
+    background-image: url('../assets/supplements.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    /* center items horizontally */
+    gap: 14rem;
+    /* space between items */
+    flex-wrap: wrap;
+    /* wrap to next line on small screens */
+    padding: 5rem 0;
+
+}
+
+/* Individual store items */
+.store-item {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.store-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Images */
+.store-image {
+    width: 40rem;
+    /* adjust size as needed */
+
+    height: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Optional: different styling for supplements vs clothes */
+.sup-image {
+    /* additional styles if needed */
+}
+
+.clo-image {
+    /* additional styles if needed */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .store-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .store-image {
+        width: 80%;
+        /* shrink images on mobile */
+    }
+}
+
+
+
+
+/* Theme variables 
+:root {
+    --bg: #0f1724;
+    --card-bg: #0b1220;
+    --accent: #7dd3fc;
+    --muted: #94a3b8;
+    --radius: 12px;
+    --gap: 20px;
+}
+
+/* Page wrapper (use in your Store component if needed) 
+.store-wrapper {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 16px;
+    background: linear-gradient(180deg, rgba(15, 23, 36, 0.85), rgba(8, 10, 15, 0.85));
+    color: #e6eef8;
+    gap: var(--gap);
+}
+
+/* Grid containing the two items 
+.store-grids,
+.store-grid {
+    display: flex;
+    gap: var(--gap);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1100px;
+}
+
+/* Each clickable item wrapper 
+.store-item,
+.store-grids>a,
+.store-grid>a {
+    display: block;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.08));
+    border-radius: var(--radius);
+    overflow: hidden;
+    width: 340px;
+    height: 220px;
+    box-shadow: 0 6px 20px rgba(2, 6, 23, 0.6);
+    transition: transform 220ms ease, box-shadow 220ms ease;
+    text-decoration: none;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Make images fill the card while preserving aspect ratio 
+.store-image,
+.sup-image,
+.clo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 350ms cubic-bezier(.2, .9, .2, 1);
+}
+
+/* Hover/focus effect 
+.store-item:hover,
+.store-grids>a:hover,
+.store-grid>a:hover,
+.store-item:focus,
+.store-grids>a:focus,
+.store-grid>a:focus {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 18px 40px rgba(2, 6, 23, 0.7);
+    outline: none;
+}
+
+/* Slight image zoom on hover for a lively feel 
+.store-item:hover .store-image,
+.store-grids>a:hover .sup-image,
+.store-grid>a:hover .clo-image {
+    transform: scale(1.06);
+}
+
+/* Accessible focus ring for keyboard users 
+.store-item:focus-visible,
+.store-grids>a:focus-visible,
+.store-grid>a:focus-visible {
+    box-shadow: 0 0 0 4px rgba(125, 211, 252, 0.12), 0 18px 40px rgba(2, 6, 23, 0.7);
+    border-color: var(--accent);
+}
+
+/* Optional caption overlay (uncomment and add markup if desired)
+.store-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 12px 14px;
+  background: linear-gradient(0deg, rgba(2,6,23,0.75), rgba(2,6,23,0.15));
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+}
+*/
+
+/* Responsive: stack on small screens 
+@media (max-width: 820px) {
+
+    .store-grids,
+    .store-grid {
+        flex-direction: column;
+    }
+
+    .store-item,
+    .store-grids>a,
+    .store-grid>a {
+        width: min(92%, 520px);
+        height: 220px;
+    }
+}
+
+/* Small screens: reduce height 
+@media (max-width: 420px) {
+
+    .store-item,
+    .store-grids>a,
+    .store-grid>a {
+        height: 180px;
+    }
+}
+
+/* ...existing code... */
