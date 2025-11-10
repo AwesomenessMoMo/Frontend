@@ -10,6 +10,7 @@ import Coaches from './pages/Coaches';
 import Supplemenets from './pages/Supplements';
 import Clothes from './pages/Clothes';
 import Contactus from './pages/Contactus';
+import Subplans from './pages/Subplans'
 
 function App() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -37,6 +38,7 @@ function App() {
             <Route path='/Supplements' element={<Supplemenets />}></Route>
             <Route path='/Clothes' element={<Clothes />}></Route>
             <Route path='/contact-us' element={<Contactus />}></Route>
+            <Route path='/subplans' element={<Subplans />}></Route>
             <Route path='*' element={<Home />}></Route>
           </Routes>
           <Footer></Footer>

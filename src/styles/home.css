@@ -1,6 +1,6 @@
 /* ===== HERO SECTION ===== */
 .home {
-    background: url("../assets/main-bg.png") no-repeat center top / cover;
+    background: url("../assets/main-bg.png") no-repeat center center/cover;
     min-height: 100vh;
     display: flex;
     flex-direction: column;

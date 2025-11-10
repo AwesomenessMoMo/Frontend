@@ -1,10 +1,8 @@
 /* ===== NAVBAR BASE ===== */
 .navbar {
-  display: flex;
+  display: flex ;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  /* full-width sticky top */
   top: 0;
   left: 0;
   width: 100vw;
@@ -23,7 +21,7 @@
 }
 
 .logo-img {
-  height: 55px;
+  height: 70px;
   width: auto;
   cursor: pointer;
   transition: transform 0.3s ease;

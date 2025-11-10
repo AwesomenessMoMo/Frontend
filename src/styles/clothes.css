@@ -1,14 +1,29 @@
 .clothes {
-    background-image: url('../assets/clothes.png');
+    background-image: url('../assets/clothes-bg.png');
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
     text-align: center;
-    z-index: 10;
+    color: #e0e0e0;
+    padding: 2rem;
     position: relative;
+    overflow: hidden;
+    margin: 0;
+}
+.clothes::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.3) 10%,
+            rgba(0, 0, 0, 0.7) 100%);
+    z-index: 0;
+}
+.clothes * {
+    position: relative;
+    z-index: 1;
 }
 
 .clothes h1 {
