@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import '../styles/footer.css';
-import Social from "./social";
 
 function Footer() {
     return <>
@@ -13,7 +12,6 @@ function Footer() {
                 <Link to="/">Home</Link>
             </div>
             <div>
-                <Social></Social>
             </div>
             © 2025 Bi To Tri Gym. All rights reserved.
         </footer>
