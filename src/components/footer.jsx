@@ -2,8 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import '../styles/footer.css';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
+import Social from "./social";
 
 function Footer() {
     return <>
@@ -14,8 +13,7 @@ function Footer() {
                 <Link to="/">Home</Link>
             </div>
             <div>
-                <Link to={"facebook"}><FacebookIcon /></Link>
-                <Link to={"instagram"}><InstagramIcon /></Link>
+                <Social></Social>
             </div>
             © 2025 Bi To Tri Gym. All rights reserved.
         </footer>

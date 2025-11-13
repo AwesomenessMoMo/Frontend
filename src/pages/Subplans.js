@@ -50,7 +50,7 @@ function Subplans() {
                     <button className="subscribe-button">Subscribe Now</button>
                 </div>
             </div>
-
+            
             {/* ===== ANNUAL PLANS ===== */}
             <h2 className="plan-section-title">Annual Plans</h2>
             <div className="subplans-grid">

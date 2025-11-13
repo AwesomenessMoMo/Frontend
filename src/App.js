@@ -10,7 +10,7 @@ import Coaches from './pages/Coaches';
 import Supplemenets from './pages/Supplements';
 import Clothes from './pages/Clothes';
 import Contactus from './pages/Contactus';
-import Subplans from './pages/Subplans'
+import Subplans from './pages/Subplans';
 
 function App() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -25,6 +25,8 @@ function App() {
       setOpenMenu(false);
     }
   };
+
+
 
   return (
     <div className='main'>
