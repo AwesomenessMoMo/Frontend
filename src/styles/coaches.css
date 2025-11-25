@@ -1,42 +1,126 @@
-.coaches {
-    background: url("../assets/coaches-bg.png") no-repeat center center/cover;
-    min-height: 100vh;
+/* ===== HERO SECTION ===== */
+.coaches-hero {
+    background: url("../assets/coaches-bg.png") no-repeat center top/cover;
+    height: 45vh;
     display: flex;
     flex-direction: column;
+    /* FIX: allows h1 and p to stack */
     justify-content: center;
     align-items: center;
-    text-align: center;
-    color: #e0e0e0;
-    padding: 2rem;
     position: relative;
-    overflow: hidden;
-    margin: 0;
+    padding: 1rem;
+    text-align: center;
 }
-.coaches::before {
+
+.coaches-hero::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom,
-            rgba(0, 0, 0, 0.3) 10%,
-            rgba(0, 0, 0, 0.7) 100%);
+    background: rgba(0, 0, 0, 0.55);
     z-index: 0;
 }
-.coaches * {
+
+.coaches-hero h1 {
     position: relative;
-    z-index: 1;
-}
-
-.coaches h1 {
-    font-size: 2.5rem;
     color: #ff0000;
+    font-size: 3rem;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    z-index: 2;
+    margin-bottom: 0.5rem;
+    animation: fadeDown 1s ease forwards;
 }
 
-.coaches p {
+/* HERO PARAGRAPH */
+.coaches-hero p {
+    position: relative;
     font-size: 1.1rem;
     color: #e0e0e0;
     max-width: 700px;
-    line-height: 1.8;
+    margin-top: 0.5rem;
+    line-height: 1.7;
+    opacity: 0;
+    animation: fadeInCenter 1.3s ease forwards;
+    z-index: 2;
+}
+
+/* ===== COACHES SECTION ===== */
+.coaches-section {
+    background-color: #0a0a0a;
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+}
+
+/* ===== INDIVIDUAL COACH CARDS ===== */
+.coach-card {
+    background: rgba(255, 255, 255, 0.06);
+    padding: 2rem 1.5rem;
+    border-radius: 15px;
+    width: 260px;
+    text-align: center;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+    transition: 0.3s ease;
+}
+
+.coach-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.35);
+}
+
+/* Coach Images */
+.coach-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ff0000;
+    margin-bottom: 1rem;
+}
+
+/* Coach Text */
+.coach-card h3 {
+    color: white;
+    margin-bottom: 0.4rem;
+    font-size: 1.3rem;
+}
+
+.coach-card p {
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+/* New fade down animation */
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* New subtle zoom fade */
+@keyframes fadeInCenter {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+
+    60% {
+        opacity: 0.6;
+        transform: translateY(10px) scale(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }

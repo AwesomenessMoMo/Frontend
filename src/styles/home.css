@@ -7,7 +7,6 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #e0e0e0;
     padding: 2rem;
     position: relative;
     overflow: hidden;
@@ -29,58 +28,177 @@
     z-index: 1;
 }
 
-/* ===== HERO TEXT ===== */
 .home h1 {
     font-size: 3rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
     color: #ff0000;
-    /* brand red */
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
 .home p {
-    font-size: 1.2rem;
     max-width: 600px;
-    line-height: 1.6;
-    color: #e0e0e0;
     margin: 0 auto;
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
 
-/* ===== HERO BUTTON ===== */
 .home button {
     margin-top: 30px;
     padding: 12px 30px;
+    border-radius: 25px;
     font-size: 1rem;
     font-weight: 600;
+    background: #ff0000;
     border: none;
-    border-radius: 25px;
-    color: #fff;
-    background-color: #ff0000;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+    color: white;
     cursor: pointer;
-    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+    transition: 0.3s;
 }
 
 .home button:hover {
-    background-color: #cc0000;
-    box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
     transform: translateY(-3px);
+    background: #c90000;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
+}
+
+
+/* ===== ABOUT SECTION ===== */
+.about-section {
+    width: 100%;
+    min-height: 80vh;
+    padding: 4rem 2rem;
+    color: #f0f0f0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    /* ⭐ Parallax Background Image ⭐ */
+    background-image: url('../assets/about1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* 🔥 Makes the image scroll slowly */
+}
+
+/* Dark overlay for better readability */
+.about-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 0;
+}
+
+.about-section * {
+    position: relative;
+    z-index: 1;
+}
+
+.about-section h2 {
+    font-size: 3rem;
+    color: #ff0000;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.about-section p {
+    max-width: 800px;
+    margin: 0 auto 1rem auto;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #d6d6d6;
+}
+
+
+
+/* ===== WHY SECTION ===== */
+.why-section {
+    padding: 4rem 2rem;
+    background: #0c0c0c;
+    text-align: center;
+    color: white;
+}
+
+.why-section h2 {
+    color: #ff0000;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.why-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.why-card {
+    background: #111;
+    padding: 2rem;
+    width: 260px;
+    border-radius: 15px;
+    cursor: pointer;
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+.why-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+    border-color: red;
+}
+
+/* ===== CTA SECTION ===== */
+.cta-section {
+    padding: 3rem 1rem;
+    background: #080808;
+    text-align: center;
+}
+
+.cta-section h2 {
+    color: #ff0000;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.cta-section p {
+    color: #d6d6d6;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.cta-section button {
+    padding: 12px 28px;
+    border-radius: 25px;
+    background: #ff0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 0 18px rgba(255, 0, 0, 0.5);
+}
+
+.cta-section button:hover {
+    transform: translateY(-3px);
+    background: #c90000;
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.8);
 }
 
 /* ===== ANIMATIONS ===== */
-.home h1,
-.home p,
-.home button {
-    animation: fadeInUp 1s ease forwards;
+.fade-in {
     opacity: 0;
+    animation: fadeIn 1.4s ease forwards;
 }
 
-@keyframes fadeInUp {
+@keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(10px);
     }
 
     to {
@@ -89,36 +207,19 @@
     }
 }
 
-/* ===== ABOUT US SECTION ===== */
-.about-section {
-    background-color: #0a0a0a;
-    color: #f0f0f0;
-    padding: 4rem 2rem;
-    width: 100%;
-    max-width: 100vw;
-    box-sizing: border-box;
-    text-align: center;
-    position: relative;
-    overflow-x: hidden;
-    margin: 0 auto;
+.slide-up {
+    opacity: 0;
+    animation: slideUp 1.4s ease forwards;
 }
 
-.about-section h2 {
-    font-size: 2.2rem;
-    color: #ff0000;
-    text-transform: uppercase;
-    margin-bottom: 1.5rem;
-    letter-spacing: 1px;
-}
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
 
-.about-section p {
-    max-width: 800px;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin: 0 auto 1rem auto;
-    color: #d6d6d6;
-}
-
-.about-section strong {
-    color: #fff;
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

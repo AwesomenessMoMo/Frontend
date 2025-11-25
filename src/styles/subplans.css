@@ -8,15 +8,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem 1rem;
     box-sizing: border-box;
     overflow: hidden;
+    padding-bottom: 3rem;
+}
+
+.subplans-grid {
+    margin-bottom: 1.5rem;
 }
 
 /* ===== HEADER ===== */
 .subplans-header {
     max-width: 800px;
-    margin-top: 80px;
+    margin-top: 50px;
     margin-bottom: 1.5rem;
     text-align: center;
 }

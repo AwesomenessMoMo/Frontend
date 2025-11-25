@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/navbar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -11,6 +10,9 @@ import Supplemenets from './pages/Supplements';
 import Clothes from './pages/Clothes';
 import Contactus from './pages/Contactus';
 import Subplans from './pages/Subplans';
+import TrainingProgram from './pages/TrainingPrograms';
+import ScrollToTop from "./components/ScrollToTop";
+
 
 function App() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -26,12 +28,11 @@ function App() {
     }
   };
 
-
-
   return (
     <div className='main'>
       <div className="App" onClick={handleAppClick}>
         <BrowserRouter>
+          <ScrollToTop /> 
           <Navbar toggleMenu={toggleMenu} openMenu={openMenu}></Navbar>
           <Routes>
             <Route path='/' element={<Home />}></Route>
@@ -41,6 +42,7 @@ function App() {
             <Route path='/Clothes' element={<Clothes />}></Route>
             <Route path='/contact-us' element={<Contactus />}></Route>
             <Route path='/subplans' element={<Subplans />}></Route>
+            <Route path='/training-programs' element={<TrainingProgram />}></Route>
             <Route path='*' element={<Home />}></Route>
           </Routes>
           <Footer></Footer>
@@ -52,6 +54,3 @@ function App() {
 }
 
 export default App;
-
-
-

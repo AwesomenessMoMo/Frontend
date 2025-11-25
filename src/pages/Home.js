@@ -4,34 +4,75 @@ import { useNavigate } from "react-router-dom";
 
 const Home = () => {
     const navigate = useNavigate();
+
     return (
         <>
             {/* Hero Section */}
-            <div className="home">
-                <h1>Welcome to Bi To Tri Gym</h1>
-                <p>
-                    Transform your strength, endurance, and mindset with our professional
-                    coaches and personalized training plans.
+            <div className="home fade-in">
+                <h1 className="animate-title">Welcome to Bi To Tri Gym</h1>
+                <p className="animate-text">
+                    Transform your strength, endurance, and mindset with our professional coaches
+                    and personalized training plans.
                 </p>
-                <button onClick={() => navigate("/Subplans")}>Subscribe Now</button>
-            </div >
+                <button className="animate-button" onClick={() => navigate("/Subplans")}>
+                    Subscribe Now
+                </button>
+            </div>
 
             {/* About Us Section */}
-            < div className="about-section" >
+            <div className="about-section slide-up">
                 <h2>About Us</h2>
                 <p>
-                    At <strong>Bi To Tri Gym</strong>, we believe in building strength —
-                    not only in body, but in spirit and discipline. Our mission is to help
-                    every member reach their full potential through a combination of
-                    modern training techniques, expert guidance, and a motivating
-                    community.
+                    At <strong>Bi To Tri Gym</strong>, we believe in building strength — not only
+                    in body, but in spirit and discipline. Our certified trainers and modern
+                    programs are designed to help you grow at your own pace.
                 </p>
                 <p>
-                    From personalized coaching to state-of-the-art equipment, our gym is
-                    designed to give you everything you need to perform your best and
-                    transform your life, where you could also buy and try!
+                    Whether you're a beginner or an advanced athlete, our community-focused
+                    environment ensures you stay motivated, supported, and guided throughout your
+                    fitness journey.
                 </p>
-            </div >
+                <p>
+                    From personalized coaching to premium supplements and professional-grade
+                    equipment, our gym brings everything you need under one roof — train, shop, and
+                    transform your lifestyle.
+                </p>
+            </div>
+
+            {/* Why Choose Us Section */}
+            <div className="why-section fade-in">
+                <h2>Why Choose Bi To Tri Gym?</h2>
+                <div className="why-grid">
+                    <div className="why-card" onClick={() => navigate("/coaches")}>
+                        <h3>🏋️‍♂️ Expert Coaches</h3>
+                        <p>Train with certified professionals who create tailored workout plans.</p>
+                    </div>
+
+                    <div className="why-card" onClick={() => navigate("/training-programs")}>
+                        <h3>💪 Personalized Programs</h3>
+                        <p>Achieve your goals faster with structured training and tracking.</p>
+                    </div>
+
+                    <div className="why-card" onClick={() => navigate("/store")}>
+                        <h3>🛒 In-Gym Store</h3>
+                        <p>Buy supplements, gear, and apparel directly from our online shop.</p>
+                    </div>
+                </div>
+            </div>
+
+            {/* CTA Section */}
+            <div className="cta-section slide-up">
+                <h2>Ready to Start Your Transformation?</h2>
+                <p>Join hundreds of members who changed their lives at Bi To Tri Gym.</p>
+                <button
+                    onClick={() => {
+                        navigate("/Subplans");
+                        window.scrollTo(0, 0);
+                    }}
+                >
+                    View Subscription Plans
+                </button>s
+            </div>
         </>
     );
 };

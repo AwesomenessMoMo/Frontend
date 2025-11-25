@@ -1,0 +1,206 @@
+.program-container {
+    padding: 3rem 1.5rem;
+    background: #0a0a0a;
+    color: white;
+    text-align: center;
+}
+
+.program-title {
+    font-size: 2.5rem;
+    color: #ff0000;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.program-intro {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+    color: #d6d6d6;
+}
+
+/* ===== PROGRAM CARD ===== */
+.program-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    margin: 1.5rem auto;
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 800px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+    backdrop-filter: blur(6px);
+    transition: transform 0.3s ease, background 0.3s ease;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.program-card:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 0, 0, 0.15);
+}
+
+.program-card h2 {
+    color: #ff0000;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.program-card h3 {
+    color: #fff;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.program-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.program-card ul li {
+    margin: 0.4rem 0;
+    color: #ccc;
+}
+
+.program-desc {
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+/* ===== HOVER DETAILS (New) ===== */
+.hover-details {
+    margin-top: 1rem;
+    background: rgba(0, 0, 0, 0.35);
+    padding: 1rem;
+    border-radius: 12px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.program-card:hover .hover-details {
+    opacity: 1;
+    max-height: 200px;
+}
+
+.hover-details p {
+    margin: 0;
+    color: #f1f1f1;
+    font-size: 0.95rem;
+}
+
+.hover-tip {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: #ff7070;
+    display: block;
+    opacity: 0.8;
+}
+
+/* ===== MODAL OVERLAY ===== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+}
+
+/* ===== MODAL BOX ===== */
+.modal-box {
+    background: #111;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+    animation: popIn 0.3s ease;
+}
+
+.modal-box h3 {
+    color: rgb(255, 0, 0);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+.modal-box p{
+    color:white;
+}
+
+/* ===== MODAL BUTTONS ===== */
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.yes-btn,
+.no-btn {
+    flex: 1;
+    margin: 0 5px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.yes-btn {
+    background: red;
+    color: white;
+}
+
+.no-btn {
+    background: #444;
+    color: white;
+}
+
+.yes-btn:hover {
+    background: #cc0000;
+}
+
+.no-btn:hover {
+    background: #666;
+}
+
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .program-card {
+        padding: 1.5rem;
+    }
+
+    .program-title {
+        font-size: 2rem;
+    }
+}

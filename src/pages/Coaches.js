@@ -1,19 +1,47 @@
 import React from "react";
 import "../styles/coaches.css";
-import { Link } from "react-router-dom";
+import coach1 from "../assets/abou_ali.png";
+import coach2 from "../assets/serana.png";
+import coach3 from "../assets/jad_swift.png";
+import { useNavigate } from "react-router-dom";
 
 const Coaches = () => {
+    const navigate = useNavigate();
+
     return (
-        <div className="coaches">
-            <h1>Welcome to the Coaches Page</h1>
-            <p>
-                Meet our certified fitness professionals who are passionate about helping you
-                achieve your goals. Each coach brings unique expertise in strength training,
-                nutrition, and performance improvement — dedicated to guiding you every step
-                of the way.
-            </p>
-            <Link to="/">Back home</Link>
-        </div>
+        <>
+            {/* HERO SECTION */}
+            <div className="coaches-hero">
+                <h1>OUR COACHES</h1>
+                <p>
+                    Our team of certified professionals is dedicated to guiding you every step of
+                    your fitness journey. Each coach brings unique expertise, proven experience,
+                    and a passion for helping you become the strongest version of yourself.
+                </p>
+
+            </div>
+
+            {/* COACHES SECTION */}
+            <div className="coaches-section">
+                <div className="coach-card" onClick={() => navigate("/training")}>
+                    <img src={coach1} alt="Abou Ali" />
+                    <h3>Coach Abou Ali</h3>
+                    <p>Strength & Conditioning Expert</p>
+                </div>
+
+                <div className="coach-card" onClick={() => navigate("/training")}>
+                    <img src={coach2} alt="Serana" />
+                    <h3>Coach Serana</h3>
+                    <p>Weight Loss Specialist</p>
+                </div>
+
+                <div className="coach-card" onClick={() => navigate("/training")}>
+                    <img src={coach3} alt="Jad Swift" />
+                    <h3>Coach Jad Swift</h3>
+                    <p>Hypertrophy & Bodybuilding</p>
+                </div>
+            </div>
+        </>
     );
 };
 
