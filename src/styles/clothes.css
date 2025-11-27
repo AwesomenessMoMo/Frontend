@@ -1,5 +1,5 @@
 .clothes {
-    background-image: url('../assets/clothes.png');
+    background-image: url('../assets/clothes-bg.png');
     min-height: 100vh;
     display: flex;
     flex-direction: column;

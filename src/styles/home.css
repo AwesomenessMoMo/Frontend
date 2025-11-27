@@ -1,4 +1,6 @@
-/* ===== HERO SECTION ===== */
+/* =========================================
+   =============== HERO SECTION ===============
+   ========================================= */
 .home {
     background: url("../assets/main-bg.png") no-repeat center center/cover;
     min-height: 100vh;
@@ -10,16 +12,17 @@
     padding: 2rem;
     position: relative;
     overflow: hidden;
-    margin: 0;
 }
 
 .home::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom,
-            rgba(0, 0, 0, 0.3) 10%,
-            rgba(0, 0, 0, 0.7) 100%);
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.35),
+        rgba(0, 0, 0, 0.75)
+    );
     z-index: 0;
 }
 
@@ -29,41 +32,45 @@
 }
 
 .home h1 {
-    font-size: 3rem;
+    font-size: 3.2rem;
     color: #ff0000;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
 }
 
 .home p {
-    max-width: 600px;
+    max-width: 650px;
     margin: 0 auto;
-    color: #e0e0e0;
-    font-size: 1.2rem;
-    line-height: 1.6;
+    color: #e8e8e8;
+    font-size: 1.25rem;
+    line-height: 1.7;
 }
 
+/* Hero Button */
 .home button {
-    margin-top: 30px;
-    padding: 12px 30px;
+    margin-top: 25px;
+    padding: 12px 32px;
     border-radius: 25px;
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 1.1rem;
+    font-weight: bold;
     background: #ff0000;
+    color: white;
     border: none;
     cursor: pointer;
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
-    transition: 0.3s;
+    transition: 0.25s ease;
 }
 
 .home button:hover {
-    transform: translateY(-3px);
-    background: #c90000;
+    transform: translateY(-3px) scale(1.03);
+    background: #cc0000;
     box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
 }
 
-
-/* ===== ABOUT SECTION ===== */
+/* =========================================
+   ============== ABOUT SECTION ==============
+   ========================================= */
 .about-section {
     width: 100%;
     min-height: 80vh;
@@ -73,15 +80,13 @@
     position: relative;
     overflow: hidden;
 
-    /* ⭐ Parallax Background Image ⭐ */
-    background-image: url('../assets/about1.png');
+    /* Parallax */
+    background-image: url("../assets/about1.png");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
-/* Dark overlay for better readability */
 .about-section::before {
     content: "";
     position: absolute;
@@ -96,23 +101,23 @@
 }
 
 .about-section h2 {
-    font-size: 3rem;
+    font-size: 2.8rem;
     color: #ff0000;
-    text-transform: uppercase;
     margin-bottom: 1.5rem;
+    text-transform: uppercase;
 }
 
 .about-section p {
     max-width: 800px;
-    margin: 0 auto 1rem auto;
-    font-size: 1.5rem;
+    margin: 0.7rem auto;
+    font-size: 1.35rem;
     line-height: 1.8;
-    color: #d6d6d6;
+    color: #dcdcdc;
 }
 
-
-
-/* ===== WHY SECTION ===== */
+/* =========================================
+   ============== WHY SECTION ================
+   ========================================= */
 .why-section {
     padding: 4rem 2rem;
     background: #0c0c0c;
@@ -122,7 +127,7 @@
 
 .why-section h2 {
     color: #ff0000;
-    font-size: 2rem;
+    font-size: 2.3rem;
     margin-bottom: 2rem;
     text-transform: uppercase;
 }
@@ -140,17 +145,19 @@
     width: 260px;
     border-radius: 15px;
     cursor: pointer;
-    border: 1px solid rgba(255, 0, 0, 0.3);
-    transition: 0.3s;
+    border: 1px solid rgba(255, 0, 0, 0.25);
+    transition: 0.3s ease;
 }
 
 .why-card:hover {
     transform: translateY(-7px);
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
-    border-color: red;
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.45);
+    border-color: #ff0000;
 }
 
-/* ===== CTA SECTION ===== */
+/* =========================================
+   ============== CTA SECTION ================
+   ========================================= */
 .cta-section {
     padding: 3rem 1rem;
     background: #080808;
@@ -160,7 +167,8 @@
 .cta-section h2 {
     color: #ff0000;
     margin-bottom: 1rem;
-    font-size: 2rem;
+    font-size: 2.2rem;
+    text-transform: uppercase;
 }
 
 .cta-section p {
@@ -177,28 +185,29 @@
     border: none;
     cursor: pointer;
     font-size: 1rem;
-    transition: 0.3s;
-    box-shadow: 0 0 18px rgba(255, 0, 0, 0.5);
+    transition: 0.3s ease;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
 }
 
 .cta-section button:hover {
-    transform: translateY(-3px);
     background: #c90000;
-    box-shadow: 0 0 25px rgba(255, 0, 0, 0.8);
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.85);
 }
 
-/* ===== ANIMATIONS ===== */
+/* =========================================
+   ================ ANIMATIONS ===============
+   ========================================= */
 .fade-in {
     opacity: 0;
-    animation: fadeIn 1.4s ease forwards;
+    animation: fadeIn 1.5s ease forwards;
 }
 
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(10px);
+        transform: translateY(15px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -215,9 +224,38 @@
         opacity: 0;
         transform: translateY(40px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   ========= RESPONSIVE IMPROVEMENTS =========
+   ========================================= */
+@media (max-width: 768px) {
+    .home h1 {
+        font-size: 2.4rem;
+    }
+
+    .home p {
+        font-size: 1rem;
+    }
+
+    .about-section h2 {
+        font-size: 2rem;
+    }
+
+    .about-section p {
+        font-size: 1.15rem;
+    }
+
+    .why-card {
+        width: 90%;
+    }
+
+    .home {
+        padding: 1rem;
     }
 }

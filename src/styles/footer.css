@@ -1,17 +1,43 @@
+/* ================================
+   FOOTER — MAIN CONTAINER
+   ================================ */
 .footer {
     width: 100%;
-    background: #111;
+    background: #0a0a0a;
     color: #e5e5e5;
-    padding: 3rem 4rem;
+    padding: 3.5rem 4rem;
     box-sizing: border-box;
+    border-top: 2px solid rgba(255, 0, 0, 0.2);
+    position: relative;
 }
 
+/* Slight glossy overlay */
+.footer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 0, 0, 0.05),
+        rgba(255, 0, 0, 0.02)
+    );
+    pointer-events: none;
+}
+
+/* ================================
+   FOOTER GRID LAYOUT
+   ================================ */
 .footer-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 3rem;
+    position: relative;
+    z-index: 2;
 }
 
+/* ================================
+   ABOUT SECTION
+   ================================ */
 .footer-about {
     grid-column: span 1;
     max-width: 350px;
@@ -19,73 +45,101 @@
 
 .footer-logo {
     font-size: 1.7rem;
-    color: white;
     margin-bottom: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 1px;
 }
 
 .footer-about p {
-    line-height: 1.6;
+    line-height: 1.7;
     margin-bottom: 1.5rem;
+    color: #d0d0d0;
 }
 
+/* Increased footer logo quality */
+.logo-img-footer {
+    height: 115px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo-img-footer:hover {
+    transform: scale(1.05);
+}
+
+/* ================================
+   FOOTER COLUMN TITLES
+   ================================ */
 .footer-col h3 {
-    font-size: 1rem;
+    font-size: 1.05rem;
     color: #fff;
     margin-bottom: 1rem;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid red;
     display: inline-block;
-    padding-bottom: 2px;
+    padding-bottom: 3px;
+    letter-spacing: 0.5px;
 }
 
+/* ================================
+   LINKS
+   ================================ */
 .footer-col a {
     display: block;
-    color: #ccc;
+    color: #c9c9c9;
     text-decoration: none;
     margin: 0.4rem 0;
-    transition: 0.2s;
+    transition: 0.3s ease;
+    font-size: 0.95rem;
 }
 
 .footer-col a:hover {
-    color: #fff;
+    color: #ffffff;
+    transform: translateX(4px);
 }
 
+/* ================================
+   SOCIAL ICONS
+   ================================ */
 .footer-socials {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.3rem;
     margin-top: 1rem;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
 }
 
 .footer-socials svg {
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .footer-socials svg:hover {
     color: #ff0000;
+    transform: scale(1.15);
 }
 
+/* ================================
+   COPYRIGHT
+   ================================ */
 .footer-bottom {
     text-align: center;
     margin-top: 3rem;
     font-size: 0.9rem;
     color: #aaa;
-    border-top: 1px solid #333;
+    border-top: 1px solid #222;
     padding-top: 1rem;
+    letter-spacing: 0.3px;
 }
 
-.logo-img-footer {
-  height: 100px;
-  width: auto;
-  transition: transform 0.3s ease;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
+/* ================================
+   RESPONSIVE DESIGN
+   ================================ */
+@media (max-width: 1000px) {
     .footer-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
     }
 }
 
@@ -95,6 +149,14 @@
     }
 
     .footer {
-        padding: 2rem;
+        padding: 2.5rem 1.5rem;
+    }
+
+    .footer-socials {
+        margin-top: 2rem;
+    }
+
+    .footer-bottom {
+        font-size: 0.85rem;
     }
 }

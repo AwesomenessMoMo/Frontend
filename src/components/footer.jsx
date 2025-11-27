@@ -46,7 +46,7 @@ function Footer() {
         <div className="footer-col">
           <h3>SUPPORT</h3>
           <Link to="/contact-us">Contact Us</Link>
-          <Link to="#">FAQ</Link>
+          <Link to="/faq">FAQ</Link>
         </div>
 
       </div>

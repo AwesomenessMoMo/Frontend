@@ -1,31 +1,127 @@
-.supplements {
-    background-image: url('../assets/supplements.png');
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    min-height: 100vh;
+/* ==== PAGE LAYOUT ==== */
+.supplements-page {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    min-height: 100vh;
+    background: #0a0a0a;
     color: white;
-    text-align: center;
-    z-index: 10;
-    position: relative;
-}
-.supplements::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1;
 }
 
-.supplements h1 {
+/* ==== SIDEBAR ==== */
+.filter-sidebar {
+    width: 250px;
+    background: #111;
+    padding: 2rem 1.5rem;
+    border-right: 2px solid rgba(255, 0, 0, 0.2);
+}
+
+.filter-sidebar h2 {
+    font-size: 1.6rem;
     color: #ff0000;
-    font-size: 3rem;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
+}
+
+.filter-sidebar label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #ccc;
+}
+
+.filter-sidebar select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 0.5rem;
+    border-radius: 8px;
+    background: #222;
+    color: white;
+    border: 1px solid #444;
+}
+
+.back-btn {
+    display: block;
+    margin-top: 2rem;
+    text-decoration: none;
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+/* ==== RIGHT CONTENT ==== */
+.supplements-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+.supplements-content h1 {
+    color: #ff0000;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+/* ==== PRODUCT GRID ==== */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.product-card {
+    background: #151515;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(255, 0, 0, 0.2);
+    transition: 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+}
+
+/* Fake product image for now */
+.product-img {
+    height: 150px;
+    background: #222;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    margin: 0.5rem 0;
+}
+
+.product-card p {
+    color: #ccc;
+    margin-bottom: 0.8rem;
+}
+
+.product-card button {
+    padding: 10px 18px;
+    background: #ff0000;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.product-card button:hover {
+    background: #c90000;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 800px) {
+    .supplements-page {
+        flex-direction: column;
+    }
+
+    .filter-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid rgba(255, 0, 0, 0.2);
+    }
+
+    .products-grid {
+        padding-top: 1rem;
+    }
 }

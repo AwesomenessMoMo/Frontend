@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/store.css";
-import supplementImage from "../assets/supplements.png";
-import clothesImage from "../assets/clothes.png";
+import supplementImage from "../assets/supplements-bg.png";
+import clothesImage from "../assets/clothes-bg.png";
 import { useNavigate } from "react-router-dom";
 
 function Store() {

@@ -71,7 +71,7 @@ const Home = () => {
                     }}
                 >
                     View Subscription Plans
-                </button>s
+                </button>
             </div>
         </>
     );

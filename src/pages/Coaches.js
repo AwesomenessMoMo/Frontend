@@ -1,8 +1,8 @@
 import React from "react";
 import "../styles/coaches.css";
-import coach1 from "../assets/abou_ali.png";
-import coach2 from "../assets/serana.png";
-import coach3 from "../assets/jad_swift.png";
+import coach1 from "../assets/coaches/abou_ali.png";
+import coach2 from "../assets/coaches/serana.png";
+import coach3 from "../assets/coaches/jad_swift.png";
 import { useNavigate } from "react-router-dom";
 
 const Coaches = () => {
