@@ -1,20 +1,14 @@
 import React, { useState } from "react";
 import "../styles/supplements.css";
 import { Link } from "react-router-dom";
-
-/* --- TEMPORARY SAMPLE PRODUCTS (replace with DB later) --- */
-const productList = [
-    { id: 1, name: "Whey Protein", price: 30, category: "Protein" },
-    { id: 2, name: "Creatine Monohydrate", price: 18, category: "Creatine" },
-    { id: 3, name: "BCAA Aminos", price: 20, category: "Amino Acids" },
-];
+import supplementsData from "../data/supplementsData";
 
 const Supplements = () => {
     const [sortType, setSortType] = useState("");
     const [category, setCategory] = useState("All");
 
     /* --- FILTER + SORT LOGIC --- */
-    const filtered = productList
+    const filtered = supplementsData
         .filter((p) => (category === "All" ? true : p.category === category))
         .sort((a, b) => {
             if (sortType === "low-high") return a.price - b.price;
@@ -34,9 +28,9 @@ const Supplements = () => {
                 <label>Category</label>
                 <select value={category} onChange={(e) => setCategory(e.target.value)}>
                     <option>All</option>
-                    <option>Protein</option>
+                    <option>Amino Acid</option>
                     <option>Creatine</option>
-                    <option>Amino Acids</option>
+                    <option>Whey Protein</option>
                 </select>
 
                 <label>Sort By</label>
@@ -58,9 +52,15 @@ const Supplements = () => {
                 <div className="products-grid">
                     {filtered.map((item) => (
                         <div className="product-card" key={item.id}>
-                            <div className="product-img"></div>
+                            <img
+                                src={item.images[0]} 
+                                alt={item.name}
+                                className="product-img"
+                            />
+
                             <h3>{item.name}</h3>
                             <p>${item.price}</p>
+
                             <button>Add to Cart</button>
                         </div>
                     ))}
