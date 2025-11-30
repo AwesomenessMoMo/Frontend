@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import "../styles/cartsidebar.css";
 import { useCart } from "../context/CartContext";
-import { useNavigate } from "react-router-dom"; // ADD THIS
+import { useNavigate } from "react-router-dom";
 
 const CartSidebar = ({ open, close }) => {
     const { cart, addToCart, removeOne, removeAll } = useCart();
     const ref = useRef();
-    const navigate = useNavigate(); // ADD THIS
+    const navigate = useNavigate();
 
     // Close on outside click
     useEffect(() => {
@@ -68,15 +68,15 @@ const CartSidebar = ({ open, close }) => {
                             ))}
                         </div>
 
-                        {/* ------------------------------ */}
-                        {/*   CHECKOUT BUTTON SECTION       */}
-                        {/* ------------------------------ */}
+                        {}
+                        {}
+                        {}
                         <div className="checkout-section">
                             <button
                                 className="checkout-btn"
                                 onClick={() => {
-                                    close();        // Close sidebar
-                                    navigate("/checkout"); // Go to checkout page
+                                    close();       
+                                    navigate("/checkout");
                                 }}
                             >
                                 Proceed to Checkout →

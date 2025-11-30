@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 function Subplans() {
     const navigate = useNavigate();
 
-    // Send user to checkout with selected plan
+    //Send user to checkout with selected plan
     const goToCheckout = (planName, price) => {
         navigate("/checkout", {
             state: {

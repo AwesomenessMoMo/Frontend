@@ -12,14 +12,11 @@ import SignupModal from "./SignupModal";
 import CartSidebar from "./CartSidebar";
 
 function Navbar(props) {
+   const navigate = useNavigate();
   const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState([]);
-  const navigate = useNavigate();
-
   const { user, logout } = useAuth();
   const { cart } = useCart();
-
-  // Modal states
   const [showLogin, setShowLogin] = useState(false);
   const [showSignup, setShowSignup] = useState(false);
   const [openCart, setOpenCart] = useState(false);

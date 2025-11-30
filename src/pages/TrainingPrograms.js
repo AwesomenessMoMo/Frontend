@@ -183,6 +183,7 @@ const TrainingProgram = () => {
                     <div className="modal-box" onClick={(e) => e.stopPropagation()}>
                         <h3>Do you want a coach for this program?</h3>
                         <p>Click outside to cancel</p>
+                        <p>pressing no will download a PDF of the chosen program</p>
 
                         <div className="modal-buttons">
                             <button className="yes-btn" onClick={chooseYes}>Yes</button>

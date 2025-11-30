@@ -11,7 +11,7 @@ function SignupModal({ close, openLogin }) {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // In real version you'd save user to backend
+        //for backend later
         login({ name, email });
 
         close();

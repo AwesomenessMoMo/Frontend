@@ -92,19 +92,6 @@
     color: #ccc;
 }
 
-/* ANIMATIONS */
-@keyframes fadeDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInCenter {
-    0% { opacity: 0; transform: translateY(20px) scale(0.95); }
-    60% { opacity: 0.6; transform: translateY(10px) scale(1); }
-    100% { opacity: 1; transform: translateY(0) scale(1); }
-}
-
-/* INLINE SCHEDULE WRAPPER */
 .inline-schedule-wrapper {
     width: 100%;
     padding-top: 3rem;
@@ -123,6 +110,17 @@
     border: 1px solid rgba(255,0,0,0.25);
     box-shadow: 0 0 25px rgba(255,0,0,0.35);
     animation: fadeIn 0.45s ease;
+}
+/* Animations */
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInCenter {
+    0% { opacity: 0; transform: translateY(20px) scale(0.95); }
+    60% { opacity: 0.6; transform: translateY(10px) scale(1); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 @keyframes fadeIn {

@@ -39,13 +39,13 @@ const Coaches = () => {
 
     return (
         <>
-            {/* Hero Section */}
+            {}
             <div className="coaches-hero">
                 <h1>OUR COACHES</h1>
                 <p>Our team of certified professionals is ready to guide your fitness journey.</p>
             </div>
 
-            {/* Coach Cards */}
+            {}
             <div className="coaches-section">
                 {coaches.map((c, i) => (
                     <div
@@ -60,7 +60,7 @@ const Coaches = () => {
                 ))}
             </div>
 
-            {/* Schedule */}
+            {}
             {selectedCoach && (
                 <CoachesSchedule
                     coach={selectedCoach.name}

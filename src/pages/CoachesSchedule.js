@@ -2,30 +2,31 @@ import React, { useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import "../styles/coachesschedule.css";
+import { useNavigate } from "react-router-dom";
+
 
 const CoachesSchedule = ({ coach, image, specialty, bio }) => {
     const [selectedDate, setSelectedDate] = useState(null);
     const [selectedTime, setSelectedTime] = useState("");
     const [showPopup, setShowPopup] = useState(false);
+    const navigate = useNavigate();
 
     const timeSlots = [
         "08:00 AM", "09:00 AM", "10:00 AM",
-        "12:00 PM", "01:00 PM", "03:00 PM",
+        "11:00 AM", "12:00 PM", "01:00 PM",
+        "02:00 PM", "03:00 PM", "04:00 PM",
         "05:00 PM", "06:00 PM", "08:00 PM",
     ];
 
     const confirmBooking = () => {
         setShowPopup(true);
-        setTimeout(() => {
-            setShowPopup(false);
-        }, 2000);
     };
 
     return (
         <div className="inline-schedule-wrapper">
             <div className="inline-schedule-box">
-                
-                {/* Coach Profile */}
+
+                {}
                 <div className="coach-profile">
                     <img src={image} alt={coach} className="coach-img" />
 
@@ -36,7 +37,7 @@ const CoachesSchedule = ({ coach, image, specialty, bio }) => {
                     </div>
                 </div>
 
-                {/* Calendar */}
+                {}
                 <div className="calendar-box">
                     <h2>Select a Date</h2>
                     <Calendar
@@ -64,7 +65,7 @@ const CoachesSchedule = ({ coach, image, specialty, bio }) => {
                     </div>
                 )}
 
-                {/* Confirmation */}
+                {}
                 {selectedDate && selectedTime && (
                     <div className="confirmation">
                         <h3>Booking Summary</h3>
@@ -82,13 +83,17 @@ const CoachesSchedule = ({ coach, image, specialty, bio }) => {
                     </div>
                 )}
 
-                {/* Success Popup */}
+                {}
                 {showPopup && (
                     <div className="popup-overlay">
                         <div className="popup-box">
                             <h2>Success!</h2>
                             <p>Your session has been booked.</p>
-                            <button onClick={() => setShowPopup(false)}>OK</button>
+
+                            {/* Manual close + redirect */}
+                            <button onClick={() => navigate("/home")}>
+                                Awesome!
+                            </button>
                         </div>
                     </div>
                 )}

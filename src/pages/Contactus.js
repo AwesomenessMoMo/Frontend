@@ -16,7 +16,7 @@ function Contactus() {
         e.preventDefault();
         alert("Message submitted!\n\nWe will get back to you shortly.");
 
-        //clear form after submit
+        //toclear form after submission
         setFormData({
             name: "",
             email: "",

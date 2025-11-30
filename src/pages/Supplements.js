@@ -41,7 +41,7 @@ const Supplements = () => {
     return (
         <div className="supplements-page">
 
-            {/* ===== LEFT SIDE FILTERS ===== */}
+            {}
             <aside className="filter-sidebar">
                 <h2>Filter</h2>
 
@@ -73,7 +73,7 @@ const Supplements = () => {
                 </Link>
             </aside>
 
-            {/* ===== RIGHT SIDE PRODUCTS ===== */}
+            {}
             <div className="supplements-content">
                 <h1>
                     {category === "All" ? "Supplements" : category}

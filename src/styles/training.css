@@ -18,18 +18,16 @@
     max-width: 700px;
     margin: 0 auto 2rem;
     line-height: 1.6;
-    color: #d6d6d6;
+    color: #000000;
 }
 
-/* ===== PROGRAM CARD ===== */
 .program-card {
     position: relative;
-    background: rgba(0, 0, 0, 0.05);
     margin: 1.5rem auto;
     padding: 2rem;
     border-radius: 15px;
     max-width: 800px;
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
     background-color: black;
     transition: transform 0.3s ease, background 0.3s ease;
     overflow: hidden;
@@ -69,7 +67,6 @@
     margin-bottom: 1rem;
 }
 
-/* ===== HOVER DETAILS (New) ===== */
 .hover-details {
     margin-top: 1rem;
     background: rgba(0, 0, 0, 0.35);
@@ -100,7 +97,6 @@
     opacity: 0.8;
 }
 
-/* ===== MODAL OVERLAY ===== */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -115,7 +111,6 @@
     animation: fadeIn 0.3s ease;
 }
 
-/* ===== MODAL BOX ===== */
 .modal-box {
     background: #111;
     padding: 2rem;
@@ -135,7 +130,7 @@
     color:white;
 }
 
-/* ===== MODAL BUTTONS ===== */
+
 .modal-buttons {
     display: flex;
     justify-content: space-between;
@@ -172,8 +167,6 @@
 }
 
 
-
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -195,6 +188,8 @@
         opacity: 1;
     }
 }
+
+/* Responsive */
 
 @media (max-width: 768px) {
     .program-card {

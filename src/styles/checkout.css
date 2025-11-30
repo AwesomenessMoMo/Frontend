@@ -1,4 +1,3 @@
-/* PAGE WRAPPER */
 .checkout-page {
     min-height: 100vh;
     background: #0a0a0a;
@@ -10,7 +9,6 @@
     align-items: center;
 }
 
-/* TITLE */
 .checkout-page h1 {
     font-size: 2.8rem;
     font-weight: 800;
@@ -19,7 +17,6 @@
     margin-bottom: 2rem;
     text-transform: uppercase;
 }
-
 
 .checkout-container {
     width: 100%;
@@ -32,10 +29,6 @@
     margin: 0 auto;
 }
 
-
-/* =============================
-   ORDER SUMMARY CARD
-============================= */
 .order-summary {
     background: #111;
     padding: 1.8rem;
@@ -63,9 +56,6 @@
     color: #ff0000;
 }
 
-/* =============================
-   PAYMENT BOX (CARD UI)
-============================= */
 .payment-section {
     background: #111;
     padding: 2rem;
@@ -78,15 +68,12 @@
     margin-bottom: 1.5rem;
 }
 
-/* PAYMENT INPUT LABEL */
 .pay-label {
     color: #ddd;
     font-size: 0.9rem;
     margin-bottom: 6px;
     display: block;
 }
-
-/* PAYMENT INPUT FIELD */
 .pay-input {
     background: #1a1a1a;
     color: white;
@@ -105,7 +92,6 @@
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
 }
 
-/* CARD NUMBER FIELD + LOGO */
 .card-input-wrapper {
     position: relative;
 }
@@ -118,7 +104,6 @@
     width: 45px;
 }
 
-/* ROW FOR EXPIRY + CVC */
 .pay-row {
     display: flex;
     gap: 1rem;
@@ -128,7 +113,6 @@
     flex: 1;
 }
 
-/* PAY BUTTON */
 .pay-btn {
     width: 100%;
     padding: 14px;
@@ -148,9 +132,7 @@
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
 }
 
-/* =============================
-   RESPONSIVE
-============================= */
+/* Responsive */
 @media (max-width: 768px) {
     .pay-row {
         flex-direction: column;

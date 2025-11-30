@@ -1,4 +1,3 @@
-/* DARK OVERLAY */
 .modal-overlay {
     position: fixed;
     inset: 0;
@@ -10,7 +9,6 @@
     justify-content: center;
 }
 
-/* MODAL BOX */
 .modal-box {
     background: #101010;
     padding: 35px;
@@ -23,7 +21,6 @@
     text-align: center;
 }
 
-/* TITLE */
 .modal-title {
     color: white;
     margin-bottom: 20px;
@@ -31,7 +28,6 @@
     font-weight: 700;
 }
 
-/* INPUTS */
 .modal-input {
     width: 100%;
     padding: 12px;
@@ -49,7 +45,6 @@
     box-shadow: 0 0 10px rgba(255,0,0,0.3);
 }
 
-/* BUTTON */
 .modal-btn {
     width: 100%;
     padding: 12px;
@@ -69,7 +64,6 @@
     box-shadow: 0 0 15px rgba(255,0,0,0.5);
 }
 
-/* SIGNUP SWITCH */
 .modal-switch {
     margin-top: 15px;
     color: #ccc;
@@ -86,7 +80,6 @@
     text-decoration: underline;
 }
 
-/* CLOSE ICON */
 .modal-close {
     position: absolute;
     top: 10px;
@@ -103,7 +96,7 @@
     color: white;
 }
 
-/* ANIMATION */
+/* Animations */
 @keyframes modalFade {
     from {
         opacity: 0;

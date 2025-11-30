@@ -8,11 +8,11 @@ function Store() {
   const navigate = useNavigate();
 
   return (
-    <div className="store-bg">  {/* <-- NEW wrapper for background */}
+    <div className="store-bg">  {}
 
       <div className="store-container">
 
-        {/* HEADER */}
+        {}
         <div className="store-header">
           <h1>Fuel Your Fitness Journey</h1>
           <p>
@@ -21,7 +21,7 @@ function Store() {
           </p>
         </div>
 
-        {/* GRID */}
+        {}
         <div className="store-grid">
 
           {/* SUPPLEMENTS */}

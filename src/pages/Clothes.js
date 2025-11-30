@@ -71,7 +71,7 @@ const Clothes = () => {
                 <Link to="/store" className="back-btn">← Back to Store</Link>
             </aside>
 
-            {/* MAIN CONTENT */}
+            {}
             <div className="clothes-content">
                 <h1>Clothes</h1>
 

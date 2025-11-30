@@ -1,6 +1,3 @@
-/* =========================================
-   =============== HERO SECTION ===============
-   ========================================= */
 .home {
     background: url("../assets/main-bg.png") no-repeat center center/cover;
     min-height: 100vh;
@@ -18,11 +15,9 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.35),
-        rgba(0, 0, 0, 0.75)
-    );
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.75));
     z-index: 0;
 }
 
@@ -47,7 +42,6 @@
     line-height: 1.7;
 }
 
-/* Hero Button */
 .home button {
     margin-top: 25px;
     padding: 12px 32px;
@@ -68,9 +62,6 @@
     box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
 }
 
-/* =========================================
-   ============== ABOUT SECTION ==============
-   ========================================= */
 .about-section {
     width: 100%;
     min-height: 80vh;
@@ -79,8 +70,6 @@
     text-align: center;
     position: relative;
     overflow: hidden;
-
-    /* Parallax */
     background-image: url("../assets/about1.png");
     background-size: cover;
     background-position: center;
@@ -115,9 +104,6 @@
     color: #dcdcdc;
 }
 
-/* =========================================
-   ============== WHY SECTION ================
-   ========================================= */
 .why-section {
     padding: 4rem 2rem;
     background: #0c0c0c;
@@ -155,9 +141,6 @@
     border-color: #ff0000;
 }
 
-/* =========================================
-   ============== CTA SECTION ================
-   ========================================= */
 .cta-section {
     padding: 3rem 1rem;
     background: #080808;
@@ -195,37 +178,11 @@
     box-shadow: 0 0 25px rgba(255, 0, 0, 0.85);
 }
 
-/* =========================================
-   ================ ANIMATIONS ===============
-   ========================================= */
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 1.5s ease forwards;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.slide-up {
-    opacity: 0;
-    animation: slideUp 1.4s ease forwards;
-}
-/* =====================================
-   TESTIMONIALS SECTION
-===================================== */
 .testimonial-section {
-    padding: 40px 0;       /* reduced top space */
-    margin: 0 auto;        /* centers the whole block */
+    padding: 40px 0;
+    margin: 0 auto;
     width: 100%;
-    max-width: 1200px;     /* consistent with other sections */
+    max-width: 1200px;
     text-align: center;
 }
 
@@ -238,16 +195,16 @@
     text-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
 }
 
-/* Horizontal scroll slider */
 .testimonial-slider {
     display: flex;
-    justify-content: center;   /* FIX: fully center the boxes */
+    justify-content: center;
     gap: 25px;
     flex-wrap: wrap;
     width: 100%;
-    max-width: 1100px;         /* keeps them aligned like other sections */
+    max-width: 1100px;
     margin: 0 auto;
 }
+
 .testimonial-slider::-webkit-scrollbar {
     height: 6px;
 }
@@ -261,7 +218,6 @@
     background: #1a1a1a;
 }
 
-/* Testimonial cards */
 .testimonial {
     flex: 0 0 280px;
     background: #111;
@@ -278,7 +234,6 @@
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
 }
 
-/* Testimonial text */
 .testimonial p {
     color: #f2f2f2;
     font-style: italic;
@@ -286,29 +241,48 @@
     margin-bottom: 12px;
 }
 
-/* Name */
 .testimonial h4 {
     color: #ff0000;
     font-weight: 600;
     margin: 0;
 }
 
+/* Animations */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+}
 
-@keyframes slideUp {
+@keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(40px);
+        transform: translateY(15px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
+.slide-up {
+    opacity: 0;
+    animation: slideUp 1.4s ease forwards;
+}
 
-/* =========================================
-   ========= RESPONSIVE IMPROVEMENTS =========
-   ========================================= */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responive*/
 @media (max-width: 768px) {
     .home h1 {
         font-size: 2.4rem;

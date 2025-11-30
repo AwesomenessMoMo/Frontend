@@ -1,4 +1,3 @@
-/* FULL OVERLAY */
 .cart-overlay {
     position: fixed;
     inset: 0;
@@ -11,7 +10,6 @@
     display: block;
 }
 
-/* SIDEBAR PANEL */
 .cart-sidebar {
     position: absolute;
     right: 0;
@@ -26,7 +24,6 @@
     overflow-y: auto;
 }
 
-/* HEADER */
 .cart-header {
     display: flex;
     justify-content: space-between;
@@ -50,14 +47,12 @@
     color: white;
 }
 
-/* EMPTY CART */
 .empty-msg {
     color: #ccc;
     text-align: center;
     margin-top: 20px;
 }
 
-/* CART ITEM */
 .cart-items {
     display: flex;
     flex-direction: column;
@@ -170,7 +165,7 @@
 }
 
 
-/* SLIDE ANIMATION */
+/* Animnation */
 @keyframes slideIn {
     from {
         transform: translateX(100%);

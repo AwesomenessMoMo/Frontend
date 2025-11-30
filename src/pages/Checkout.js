@@ -36,13 +36,11 @@ const Checkout = () => {
 
             <div className="checkout-container">
 
-                {/* =======================
-                    ORDER SUMMARY
-                ======================== */}
+                {}
                 <div className="order-summary">
                     <h2>Order Summary</h2>
 
-                    {/* Subscription Plan */}
+                    {}
                     {selectedPlan && (
                         <div className="checkout-item">
                             <p>{selectedPlan}</p>
@@ -50,7 +48,7 @@ const Checkout = () => {
                         </div>
                     )}
 
-                    {/* Cart Items */}
+                    {}
                     {cart.map((item, i) => (
                         <div key={i} className="checkout-item">
                             <p>{item.name} x {item.qty}</p>
@@ -58,27 +56,25 @@ const Checkout = () => {
                         </div>
                     ))}
 
-                    {/* Combined Total */}
+                    {}
                     <h3 className="total">Total: ${grandTotal}</h3>
                 </div>
 
-                {/* =======================
-                    PAYMENT METHOD
-                ======================== */}
+                {}
                 <div className="payment-section">
                     <h2>Payment Method</h2>
 
-                    {/* Name */}
+                    {}
                     <label className="pay-label">Cardholder Name</label>
                     <input
                         type="text"
                         className="pay-input"
-                        placeholder="John Doe"
+                        placeholder=""
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                     />
 
-                    {/* Card Number */}
+                    {}
                     <label className="pay-label">Card Number</label>
                     <div className="card-input-wrapper">
                         <input
@@ -99,7 +95,7 @@ const Checkout = () => {
                         />
                     </div>
 
-                    {/* Expiry & CVC */}
+                    {}
                     <div className="pay-row">
                         <div className="pay-col">
                             <label className="pay-label">Expiry</label>
@@ -132,7 +128,7 @@ const Checkout = () => {
                         </div>
                     </div>
 
-                    {/* Pay Button */}
+                    {}
                     <button className="pay-btn" onClick={handlePayment}>
                         Pay Now
                     </button>

@@ -7,7 +7,7 @@ const Home = () => {
 
     return (
         <>
-            {/* Hero Section */}
+            {}
             <div className="home fade-in">
                 <h1 className="animate-title">Welcome to Bi To Tri Gym</h1>
                 <p className="animate-text">
@@ -19,7 +19,7 @@ const Home = () => {
                 </button>
             </div>
 
-            {/* About Us Section */}
+            {}
             <div className="about-section slide-up">
                 <h2>About Us</h2>
                 <p>
@@ -39,7 +39,7 @@ const Home = () => {
                 </p>
             </div>
 
-            {/* Why Choose Us Section */}
+            {}
             <div className="why-section fade-in">
                 <h2>Why Choose Bi To Tri Gym?</h2>
                 <div className="why-grid">
@@ -81,7 +81,7 @@ const Home = () => {
             </div>
 
 
-            {/* CTA Section */}
+            {}
             <div className="cta-section slide-up">
                 <h2>Ready to Start Your Transformation?</h2>
                 <p>Join hundreds of members who changed their lives at Bi To Tri Gym.</p>
