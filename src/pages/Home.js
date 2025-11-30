@@ -59,6 +59,27 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+                   <div className="testimonial-section">
+                <h2>Member Transformations</h2>
+
+                <div className="testimonial-slider">
+                    <div className="testimonial">
+                        <p>"I lost 12kg in 8 weeks. Best gym ever!"</p>
+                        <h4>- Karim</h4>
+                    </div>
+
+                    <div className="testimonial">
+                        <p>"Amazing coaches and perfect training program."</p>
+                        <h4>- Rami</h4>
+                    </div>
+
+                    <div className="testimonial">
+                        <p>"Bi To Tri changed my entire lifestyle."</p>
+                        <h4>- Maya</h4>
+                    </div>
+                </div>
+            </div>
+
 
             {/* CTA Section */}
             <div className="cta-section slide-up">

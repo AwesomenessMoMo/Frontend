@@ -1,0 +1,116 @@
+/* DARK OVERLAY */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(4px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* MODAL BOX */
+.modal-box {
+    background: #101010;
+    padding: 35px;
+    border-radius: 18px;
+    width: 350px;
+    position: relative;
+    border: 1px solid rgba(255,0,0,0.4);
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.35);
+    animation: modalFade 0.25s ease-out;
+    text-align: center;
+}
+
+/* TITLE */
+.modal-title {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+/* INPUTS */
+.modal-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #181818;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+}
+
+.modal-input:focus {
+    border-color: #ff0000;
+    box-shadow: 0 0 10px rgba(255,0,0,0.3);
+}
+
+/* BUTTON */
+.modal-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background: #ff0000;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 5px;
+}
+
+.modal-btn:hover {
+    background: #d10000;
+    box-shadow: 0 0 15px rgba(255,0,0,0.5);
+}
+
+/* SIGNUP SWITCH */
+.modal-switch {
+    margin-top: 15px;
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+.modal-switch-link {
+    color: #ff0000;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.modal-switch-link:hover {
+    text-decoration: underline;
+}
+
+/* CLOSE ICON */
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #ff0000;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.modal-close:hover {
+    color: white;
+}
+
+/* ANIMATION */
+@keyframes modalFade {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

@@ -1,33 +1,153 @@
-.clothes {
-    background-image: url('../assets/clothes-bg.png');
-    min-height: 100vh;
+/* ================================
+   PAGE WRAPPER
+================================ */
+.clothes-page {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #e0e0e0;
-    padding: 2rem;
-    position: relative;
-    overflow: hidden;
-    margin: 0;
-}
-.clothes::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom,
-            rgba(0, 0, 0, 0.3) 10%,
-            rgba(0, 0, 0, 0.7) 100%);
-    z-index: 0;
-}
-.clothes * {
-    position: relative;
-    z-index: 1;
+    min-height: 100vh;
+    background: #0a0a0a;
+    color: white;
 }
 
-.clothes h1 {
+/* ================================
+   SIDEBAR (Filter Section)
+================================ */
+.clothes-sidebar {
+    width: 250px;
+    background: #111;
+    padding: 2rem 1.5rem;
+    border-right: 2px solid rgba(255, 0, 0, 0.2);
+}
+
+.clothes-sidebar h2 {
+    font-size: 1.6rem;
     color: #ff0000;
-    font-size: 3rem;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
+}
+
+.clothes-sidebar label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #ccc;
+}
+
+.clothes-sidebar select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 0.5rem;
+    border-radius: 8px;
+    background: #222;
+    color: white;
+    border: 1px solid #444;
+}
+
+
+.back-btn {
+    display: block;
+    margin-top: 2rem;
+    text-decoration: none;
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+
+.clothes-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+.clothes-content h1 {
+    color: #ff0000;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.clothes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* ================================
+   PRODUCT CARD
+================================ */
+.clothes-card {
+    background: #151515;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(255, 0, 0, 0.2);
+    transition: 0.3s ease;
+    height: 100%;
+}
+
+.clothes-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+}
+
+.clothes-card img {
+    width: 80%;
+    height: 350px;
+    object-fit: cover; 
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.clothes-card h3 {
+    margin: 0.5rem 0;
+}
+
+
+.clothes-card p {
+    color: #ccc;
+    margin-bottom: 0.8rem;
+}
+
+
+.sizes {
+    margin-bottom: 1rem;
+}
+
+.size-tag {
+    padding: 5px 10px;
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 0, 0, 0.2);
+    border-radius: 6px;
+    margin: 3px;
+    font-size: 0.8rem;
+}
+
+.clothes-card button {
+    padding: 10px 18px;
+    background: #ff0000;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.clothes-card button:hover {
+    background: #c90000;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 800px) {
+    .clothes-page {
+        flex-direction: column;
+    }
+
+    .clothes-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid rgba(255, 0, 0, 0.2);
+    }
+
+    .clothes-grid {
+        padding-top: 1rem;
+    }
 }

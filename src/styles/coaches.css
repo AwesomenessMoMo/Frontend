@@ -4,7 +4,6 @@
     height: 45vh;
     display: flex;
     flex-direction: column;
-    /* FIX: allows h1 and p to stack */
     justify-content: center;
     align-items: center;
     position: relative;
@@ -31,7 +30,6 @@
     animation: fadeDown 1s ease forwards;
 }
 
-/* HERO PARAGRAPH */
 .coaches-hero p {
     position: relative;
     font-size: 1.1rem;
@@ -52,6 +50,7 @@
     justify-content: center;
     gap: 2.5rem;
     flex-wrap: wrap;
+    margin-bottom: 2rem;
 }
 
 /* ===== INDIVIDUAL COACH CARDS ===== */
@@ -67,12 +66,13 @@
     transition: 0.3s ease;
 }
 
-.coach-card:hover {
+.coach-card:hover,
+.coach-card.active {
     transform: translateY(-5px);
-    box-shadow: 0 0 30px rgba(255, 0, 0, 0.35);
+    box-shadow: 0 0 35px rgba(255, 0, 0, 0.5);
+    border: 1px solid red;
 }
 
-/* Coach Images */
 .coach-card img {
     width: 120px;
     height: 120px;
@@ -82,7 +82,6 @@
     margin-bottom: 1rem;
 }
 
-/* Coach Text */
 .coach-card h3 {
     color: white;
     margin-bottom: 0.4rem;
@@ -91,36 +90,42 @@
 
 .coach-card p {
     color: #ccc;
-    font-size: 0.95rem;
 }
 
-/* New fade down animation */
+/* ANIMATIONS */
 @keyframes fadeDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-/* New subtle zoom fade */
 @keyframes fadeInCenter {
-    0% {
-        opacity: 0;
-        transform: translateY(20px) scale(0.95);
-    }
+    0% { opacity: 0; transform: translateY(20px) scale(0.95); }
+    60% { opacity: 0.6; transform: translateY(10px) scale(1); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+}
 
-    60% {
-        opacity: 0.6;
-        transform: translateY(10px) scale(1);
-    }
+/* INLINE SCHEDULE WRAPPER */
+.inline-schedule-wrapper {
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    background: #0a0a0a;
+}
 
-    100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
+.inline-schedule-box {
+    max-width: 950px;
+    width: 100%;
+    background: #0c0c0c;
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(255,0,0,0.25);
+    box-shadow: 0 0 25px rgba(255,0,0,0.35);
+    animation: fadeIn 0.45s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }

@@ -10,7 +10,7 @@ import wheyChocolateCocoa from "../assets/supplements/whey_chocolate_cocoa_flavo
 import wheyChocolateMilk from "../assets/supplements/whey_chocolate_milk_flavor.png";
 import wheyEasterEgg from "../assets/supplements/whey_easter_egg_flavor.png";
 
-export default [
+const supplementsData = [
   {
     name: "Amino Acid BCAA",
     category: "Amino Acid",
@@ -48,21 +48,22 @@ export default [
     images: [creatineNitroX],
   },
   {
-    name: "Whey – Chocolate Cocoa",
-    category: "Protein",
+    name: "Whey Chocolate Cocoa",
+    category: "Whey Protein",
     price: 35,
     images: [wheyChocolateCocoa],
   },
   {
-    name: "Whey – Chocolate Milk",
-    category: "Protein",
+    name: "Whey Chocolate Milk",
+    category: "Whey Protein",
     price: 35,
     images: [wheyChocolateMilk],
   },
   {
-    name: "Whey – Easter Egg Flavor",
-    category: "Protein",
+    name: "Whey Easter Egg Flavor",
+    category: "Whey Protein",
     price: 40,
     images: [wheyEasterEgg],
   },
 ];
+export default supplementsData;

@@ -1,6 +1,6 @@
 import './App.css';
 import Navbar from './components/navbar';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { useState } from 'react';
 import Home from './pages/Home';
 import Footer from './components/footer';
@@ -13,17 +13,17 @@ import Subplans from './pages/Subplans';
 import TrainingProgram from './pages/TrainingPrograms';
 import ScrollToTop from "./components/ScrollToTop";
 import FAQ from './pages/faq';
-
+import Schedule from './pages/CoachesSchedule';
+import Checkout from './pages/Checkout';
 
 function App() {
   const [openMenu, setOpenMenu] = useState(false);
 
   const toggleMenu = () => {
     setOpenMenu(true);
-  }
+  };
 
   const handleAppClick = (e) => {
-    //prevents closing when clicking inside navbar
     if (!e.target.closest('.navbar')) {
       setOpenMenu(false);
     }
@@ -32,25 +32,25 @@ function App() {
   return (
     <div className='main'>
       <div className="App" onClick={handleAppClick}>
-        <BrowserRouter>
-          <ScrollToTop />
-          <Navbar toggleMenu={toggleMenu} openMenu={openMenu}></Navbar>
-          <Routes>
-            <Route path='/' element={<Home />}></Route>
-            <Route path='/Coaches' element={<Coaches />}></Route>
-            <Route path='/Store' element={<Store />}></Route>
-            <Route path='/Supplements' element={<Supplemenets />}></Route>
-            <Route path='/Clothes' element={<Clothes />}></Route>
-            <Route path='/contact-us' element={<Contactus />}></Route>
-            <Route path='/subplans' element={<Subplans />}></Route>
-            <Route path='/training-programs' element={<TrainingProgram />}></Route>
-            <Route path='/faq' element={<FAQ />}></Route>
-            <Route path='*' element={<Home />}></Route>
-          </Routes>
-          <Footer></Footer>
-        </BrowserRouter>
-      </div>
 
+        <ScrollToTop />
+        <Navbar toggleMenu={toggleMenu} openMenu={openMenu} />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/Coaches' element={<Coaches />} />
+          <Route path='/Store' element={<Store />} />
+          <Route path='/Supplements' element={<Supplemenets />} />
+          <Route path='/Clothes' element={<Clothes />} />
+          <Route path='/contact-us' element={<Contactus />} />
+          <Route path='/subplans' element={<Subplans />} />
+          <Route path='/training-programs' element={<TrainingProgram />} />
+          <Route path='/faq' element={<FAQ />} />
+          <Route path="/schedule" element={<Schedule />} />
+          <Route path="/checkout" element={<> <Checkout /> </>} />
+          <Route path='*' element={<Home />} />
+        </Routes>
+        <Footer />
+      </div>
     </div>
   );
 }

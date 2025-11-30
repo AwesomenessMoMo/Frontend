@@ -33,18 +33,19 @@ function Footer() {
         </div>
 
         {/* COLUMN 3 — CATEGORIES */}
+        {/* COLUMN 3 — CATEGORIES */}
         <div className="footer-col">
           <h3>CATEGORIES</h3>
-          <Link to="/supplements">Protein</Link>
-          <Link to="/supplements">Mass Gainers</Link>
-          <Link to="/supplements">Pre-Workout</Link>
-          <Link to="/supplements">Creatine</Link>
+          <Link to="/supplements?category=whey">Whey Protein</Link>
+          <Link to="/supplements?category=amino">Amino Acid</Link>
+          <Link to="/supplements?category=creatine">Creatine</Link>
           <Link to="/supplements">View All</Link>
         </div>
 
         {/* COLUMN 4 — SUPPORT */}
         <div className="footer-col">
           <h3>SUPPORT</h3>
+          <Link to="/coaches">Coaching</Link>
           <Link to="/contact-us">Contact Us</Link>
           <Link to="/faq">FAQ</Link>
         </div>

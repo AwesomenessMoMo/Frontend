@@ -1,7 +1,20 @@
 import React from 'react';
 import '../styles/subplans.css';
+import { useNavigate } from "react-router-dom";
 
 function Subplans() {
+    const navigate = useNavigate();
+
+    // Send user to checkout with selected plan
+    const goToCheckout = (planName, price) => {
+        navigate("/checkout", {
+            state: {
+                plan: planName,
+                price: price,
+            },
+        });
+    };
+
     return (
         <div className="subplans-container">
             <div className="subplans-header">
@@ -23,7 +36,12 @@ function Subplans() {
                         <li>Monthly progress tracking</li>
                         <li>Email support</li>
                     </ul>
-                    <button className="subscribe-button">Subscribe Now</button>
+                    <button
+                        className="subscribe-button"
+                        onClick={() => goToCheckout("Basic Monthly Plan", 30)}
+                    >
+                        Subscribe Now
+                    </button>
                 </div>
 
                 <div className="subplan-item premium-plan">
@@ -35,7 +53,12 @@ function Subplans() {
                         <li>Nutrition guidance</li>
                         <li>Priority support</li>
                     </ul>
-                    <button className="subscribe-button">Subscribe Now</button>
+                    <button
+                        className="subscribe-button"
+                        onClick={() => goToCheckout("Premium Monthly Plan", 60)}
+                    >
+                        Subscribe Now
+                    </button>
                 </div>
 
                 <div className="subplan-item elite-plan">
@@ -47,10 +70,15 @@ function Subplans() {
                         <li>Advanced performance analytics</li>
                         <li>Exclusive access to events</li>
                     </ul>
-                    <button className="subscribe-button">Subscribe Now</button>
+                    <button
+                        className="subscribe-button"
+                        onClick={() => goToCheckout("Elite Monthly Plan", 80)}
+                    >
+                        Subscribe Now
+                    </button>
                 </div>
             </div>
-            
+
             {/* ===== ANNUAL PLANS ===== */}
             <h2 className="plan-section-title">Annual Plans</h2>
             <div className="subplans-grid">
@@ -61,7 +89,12 @@ function Subplans() {
                         <li>All monthly features</li>
                         <li>Save 2 months compared to monthly billing</li>
                     </ul>
-                    <button className="subscribe-button">Subscribe Annually</button>
+                    <button
+                        className="subscribe-button"
+                        onClick={() => goToCheckout("Basic Annual Plan", 360)}
+                    >
+                        Subscribe Annually
+                    </button>
                 </div>
 
                 <div className="subplan-item premium-plan">
@@ -72,7 +105,12 @@ function Subplans() {
                         <li>Personalized workouts + Nutrition</li>
                         <li>Exclusive premium support</li>
                     </ul>
-                    <button className="subscribe-button">Subscribe Annually</button>
+                    <button
+                        className="subscribe-button"
+                        onClick={() => goToCheckout("Premium Annual Plan", 576)}
+                    >
+                        Subscribe Annually
+                    </button>
                 </div>
 
                 <div className="subplan-item elite-plan">
@@ -83,7 +121,12 @@ function Subplans() {
                         <li>1-on-1 coaching sessions</li>
                         <li>Exclusive access to gym events</li>
                     </ul>
-                    <button className="subscribe-button">Subscribe Annually</button>
+                    <button
+                        className="subscribe-button"
+                        onClick={() => goToCheckout("Elite Annual Plan", 720)}
+                    >
+                        Subscribe Annually
+                    </button>
                 </div>
             </div>
         </div>

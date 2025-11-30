@@ -1,15 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/supplements.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import supplementsData from "../data/supplementsData";
+import { useCart } from "../context/CartContext";
 
 const Supplements = () => {
+    const location = useLocation();
+    const { addToCart } = useCart();
+
+    const params = new URLSearchParams(location.search);
+    const urlCategory = params.get("category");
+
     const [sortType, setSortType] = useState("");
     const [category, setCategory] = useState("All");
 
-    /* --- FILTER + SORT LOGIC --- */
+    const mapUrlToCategory = (value) => {
+        if (!value) return "All";
+        if (value === "whey") return "Whey Protein";
+        if (value === "amino") return "Amino Acid";
+        if (value === "creatine") return "Creatine";
+        return "All";
+    };
+
+    useEffect(() => {
+        setCategory(mapUrlToCategory(urlCategory));
+    }, [urlCategory]);
+
     const filtered = supplementsData
-        .filter((p) => (category === "All" ? true : p.category === category))
+        .filter((p) =>
+            category === "All" ? true : p.category === category
+        )
         .sort((a, b) => {
             if (sortType === "low-high") return a.price - b.price;
             if (sortType === "high-low") return b.price - a.price;
@@ -26,7 +46,10 @@ const Supplements = () => {
                 <h2>Filter</h2>
 
                 <label>Category</label>
-                <select value={category} onChange={(e) => setCategory(e.target.value)}>
+                <select
+                    value={category}
+                    onChange={(e) => setCategory(e.target.value)}
+                >
                     <option>All</option>
                     <option>Amino Acid</option>
                     <option>Creatine</option>
@@ -34,7 +57,10 @@ const Supplements = () => {
                 </select>
 
                 <label>Sort By</label>
-                <select value={sortType} onChange={(e) => setSortType(e.target.value)}>
+                <select
+                    value={sortType}
+                    onChange={(e) => setSortType(e.target.value)}
+                >
                     <option value="">None</option>
                     <option value="low-high">Price: Low → High</option>
                     <option value="high-low">Price: High → Low</option>
@@ -42,33 +68,42 @@ const Supplements = () => {
                     <option value="za">Name: Z → A</option>
                 </select>
 
-                <Link to="/store" className="back-btn">← Back to Store</Link>
+                <Link to="/store" className="back-btn">
+                    ← Back to Store
+                </Link>
             </aside>
 
             {/* ===== RIGHT SIDE PRODUCTS ===== */}
             <div className="supplements-content">
-                <h1>Supplements</h1>
+                <h1>
+                    {category === "All" ? "Supplements" : category}
+                </h1>
 
                 <div className="products-grid">
-                    {filtered.map((item) => (
-                        <div className="product-card" key={item.id}>
-                            <img
-                                src={item.images[0]} 
-                                alt={item.name}
-                                className="product-img"
-                            />
+                    {filtered.length === 0 ? (
+                        <p className="no-products">No products found.</p>
+                    ) : (
+                        filtered.map((item) => (
+                            <div className="product-card" key={item.id}>
+                                <img
+                                    src={item.images?.[0] || item.image}
+                                    alt={item.name}
+                                    className="product-img"
+                                />
 
-                            <h3>{item.name}</h3>
-                            <p>${item.price}</p>
+                                <h3>{item.name}</h3>
+                                <p>${item.price}</p>
 
-                            <button>Add to Cart</button>
-                        </div>
-                    ))}
+                                <button onClick={() => addToCart(item)}>
+                                    Add to Cart
+                                </button>
+                            </div>
+                        ))
+                    )}
                 </div>
             </div>
-
         </div>
-    );
+    )
 };
 
 export default Supplements;

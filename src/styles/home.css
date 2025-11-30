@@ -218,6 +218,81 @@
     opacity: 0;
     animation: slideUp 1.4s ease forwards;
 }
+/* =====================================
+   TESTIMONIALS SECTION
+===================================== */
+.testimonial-section {
+    padding: 40px 0;       /* reduced top space */
+    margin: 0 auto;        /* centers the whole block */
+    width: 100%;
+    max-width: 1200px;     /* consistent with other sections */
+    text-align: center;
+}
+
+.testimonial-section h2 {
+    color: #ff0000;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
+}
+
+/* Horizontal scroll slider */
+.testimonial-slider {
+    display: flex;
+    justify-content: center;   /* FIX: fully center the boxes */
+    gap: 25px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1100px;         /* keeps them aligned like other sections */
+    margin: 0 auto;
+}
+.testimonial-slider::-webkit-scrollbar {
+    height: 6px;
+}
+
+.testimonial-slider::-webkit-scrollbar-thumb {
+    background: #ff0000;
+    border-radius: 10px;
+}
+
+.testimonial-slider::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+/* Testimonial cards */
+.testimonial {
+    flex: 0 0 280px;
+    background: #111;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 0, 0, 0.4);
+    scroll-snap-align: center;
+    transition: 0.3s ease;
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.25);
+}
+
+.testimonial:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+}
+
+/* Testimonial text */
+.testimonial p {
+    color: #f2f2f2;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+/* Name */
+.testimonial h4 {
+    color: #ff0000;
+    font-weight: 600;
+    margin: 0;
+}
+
 
 @keyframes slideUp {
     from {
